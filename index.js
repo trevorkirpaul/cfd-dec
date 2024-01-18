@@ -1,3 +1,15 @@
+/**
+ * This function will be assigned to a custom menu option
+ * within the google sheet. The user can trigger this function
+ * which will scan the whole sheet and determine which
+ * rows are eligible for programs.
+ *
+ * If a row is eligible, then we will update a call in that row
+ * which will mark that row as eligible for contact.
+ *
+ * We can also have extra cells which signify which programs
+ * that row is eligible for.
+ */
 function checkAllForProgramEligibility() {
   const sheet = SpreadsheetApp.getActiveSheet();
   const data = sheet.getDataRange().getValues();
@@ -24,25 +36,37 @@ function checkAllForProgramEligibility() {
       email,
       phone,
     ] = thisRow;
+
+    // @TODO: pass this data to our program functions
+    // which can be accessed from `checkIsEligibleFor`
+
+    // @TODO: based on eligibility, update the cell
+    // which marks this row as eligible for contact
+
+    // @TODO: mark cells to signify which programs
+    // this row is eligible for.
   }
 }
 
 /**
  * we'll access our functions to check
  * for each program's eligibility through
- * this object
+ * this object. Each property is a function
+ * which you can find below the util functions
  */
 const checkIsEligibleFor = {
-  miamiValleyCommunityActionPartnershipWeatherization: () => {},
-  habitatForHumanityEmergencyHomeRepair: () => {},
-  countyCorpHomeRepair: () => {},
-  miamiValleyCommunityActionPartnershipEmergencyHomeRepair: () => {},
-  rebuildingTogetherDayton: () => {},
-  habitatForHumanityARPAProgram: () => {},
-  rebuildingTogetherDaytonARPAProgram: () => {},
+  miamiValleyCommunityActionPartnershipWeatherization,
+  habitatForHumanityEmergencyHomeRepair,
+  countyCorpHomeRepair,
+  miamiValleyCommunityActionPartnershipEmergencyHomeRepair,
+  rebuildingTogetherDayton,
+  habitatForHumanityARPAProgram,
+  rebuildingTogetherDaytonARPAProgram,
 };
 
+// --------------------------------------------------------------------
 // UTILS
+// --------------------------------------------------------------------
 
 /**
  * @param {Object} args
@@ -172,6 +196,10 @@ const getPercentAMIForHouseholdSize = ({ householdSize, percent }) => {
  * @property {boolean} hasLivedInHomeOver1Year - applicant has lived in home for over a year
  */
 
+// --------------------------------------------------------------------
+// Program Eligibility Functions
+// --------------------------------------------------------------------
+
 /**
  * Check if the given user (row)
  * is eligible for:
@@ -291,7 +319,8 @@ const rebuildingTogetherDayton = (userInfo) => {
  * @returns {boolean} - Returns true if the individual is eligible for home repair assistance.
  */
 const habitatForHumanityARPAProgram = (userInfo) => {
-  // @TODO: figure out how to find this
+  // @TODO: convert userInfo.address to cords
+  // and use Google Maps Geocoding Service
   const inARPANeighborhood = false;
 
   return (
@@ -313,7 +342,8 @@ const habitatForHumanityARPAProgram = (userInfo) => {
  * @returns {boolean} - Returns true if the individual is eligible for home repair assistance.
  */
 const rebuildingTogetherDaytonARPAProgram = (userInfo) => {
-  // @TODO: figure out how to find this
+  // @TODO: convert userInfo.address to cords
+  // and use Google Maps Geocoding Service
   const inARPANeighborhood = false;
 
   return (
