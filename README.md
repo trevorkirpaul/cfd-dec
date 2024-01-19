@@ -8,7 +8,7 @@
   - [ ] has applicant (home?) received help from any of the programs within last 2 years
   - [ ] applicant DOB or age
   - [ ] has applicant has lived in home for over a year
-- [ ] The screener, a resident is eligible for all programs is under 200% Federal Poverty line. Does this supersede all other income reqs?
+- [ ] In the screener, a resident is eligible for all programs is under 200% Federal Poverty line. Does this supersede all other income reqs?
 - [ ] "County Corp Home Repair" has 2 separate income reqs. Should we just use the easier to meet req to "catch-all"?
 - [ ] (possible) add test suite and some test cases
 
