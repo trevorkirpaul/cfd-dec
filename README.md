@@ -1,6 +1,6 @@
 # README
 
-## ToDo
+## ToDo & Questions
 
 - [ ] determine if address is within ARPA neighborhood
 - [ ] add logic to update a cell(s) to designate row as needing to be contacted
@@ -8,6 +8,8 @@
   - [ ] has applicant (home?) received help from any of the programs within last 2 years
   - [ ] applicant DOB or age
   - [ ] has applicant has lived in home for over a year
+- [ ] The screener, a resident is eligible for all programs is under 200% Federal Poverty line. Does this supersede all other income reqs?
+- [ ] "County Corp Home Repair" has 2 separate income reqs. Should we just use the easier to meet req to "catch-all"?
 
 ## How can we trigger our code?
 
