@@ -3,6 +3,7 @@
 ## ToDo
 
 - [ ] determine if address is within ARPA neighborhood
+- [ ] add logic to update a cell(s) to designate row as needing to be contacted
 - [ ] missing some values from google form
   - [ ] has applicant (home?) received help from any of the programs within last 2 years
   - [ ] applicant DOB or age
