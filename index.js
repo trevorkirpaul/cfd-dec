@@ -175,8 +175,8 @@ const getPercentAMIForHouseholdSize = ({ householdSize, percent }) => {
  * User information object.
  *
  * @typedef {Object} UserInfo
- * @property {number} timestamp - Timestamp of the information.
- * @property {boolean} ownsHome - Indicates if the individual owns a home.
+ * @property {number} timestamp - Timestamp of the form submission.
+ * @property {boolean} ownsHome - Indicates if the individual owns the home.
  * @property {boolean} nameIsOnDeed - Indicates if the individual's name is on the deed.
  * @property {boolean} updatedOnTaxes - Indicates if taxes are up to date.
  * @property {'single'|'duplex'|'other'} homeType - Type of home (single, duplex, other).
